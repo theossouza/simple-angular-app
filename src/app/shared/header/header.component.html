@@ -1,0 +1,67 @@
+<mat-toolbar color="primary">
+
+    <button mat-button color="primary" [matMenuTriggerFor]="piloto">Piloto</button>
+    <button mat-button color="primary" [matMenuTriggerFor]="ordens">Ordens de pagamentos</button>
+    <button mat-button color="primary" [matMenuTriggerFor]="recebimentos">Recebimentos e Tributos</button>
+    <button mat-button color="primary" [matMenuTriggerFor]="sispag">Sistema de pagamentos</button>
+    <button mat-button color="primary" [matMenuTriggerFor]="modernizacao">Modernização do Legado</button>
+
+    <mat-menu #piloto="matMenu">
+    <button mat-menu-item routerLink="/piloto/documentos" [matMenuTriggerFor]="documentos">Documentos</button>
+    <button mat-menu-item routerLink="/piloto/estrategias" [matMenuTriggerFor]="estrategias">Estrategias</button>
+    </mat-menu>
+
+    <mat-menu #documentos="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="consulta">Consulta</button>
+    <button mat-menu-item [matMenuTriggerFor]="atualizacao">Atualização</button>
+    <button mat-menu-item [matMenuTriggerFor]="exclusao">Exclusao</button>
+    <button mat-menu-item routerLink="/piloto/documentos/analitico">Analitico</button>
+    <button mat-menu-item routerLink="/piloto/documentos/sintetico">Sintético</button>
+    </mat-menu>
+
+    <mat-menu #estrategias="matMenu">
+    <button mat-menu-item routerLink="/piloto/estrategias/configurar">Configurar</button>
+    <button mat-menu-item routerLink="/piloto/estrategias/arvore">Ver árvore</button>
+    <button mat-menu-item routerLink="/piloto/estrategias/persona">Ver persona</button>
+    </mat-menu>
+
+    <mat-menu #consulta="matMenu">
+    <button mat-menu-item routerLink="/piloto/documentos/consulta/nome">Por nome</button>
+    <button mat-menu-item routerLink="/piloto/documentos/consulta/identificacao">Por identificacao</button>
+    <button mat-menu-item routerLink="/piloto/documentos/consulta/data">Por data</button>
+    </mat-menu>
+
+    <mat-menu #atualizacao="matMenu">
+    <button mat-menu-item>Legado</button>
+    <button mat-menu-item>Novo</button>
+    </mat-menu>
+
+    <mat-menu #exclusao="matMenu">
+    <button mat-menu-item>Lógica</button>
+    <button mat-menu-item>Definitiva</button>
+    </mat-menu>
+
+
+    <mat-menu #ordens="matMenu">
+        <button mat-menu-item>Documentos</button>
+        <button mat-menu-item>Estrategias</button>
+    </mat-menu>
+
+    
+    <mat-menu #recebimentos="matMenu">
+        <button mat-menu-item>Documentos</button>
+        <button mat-menu-item>Estrategias</button>
+    </mat-menu>
+
+    
+    <mat-menu #sispag="matMenu">
+        <button mat-menu-item>Documentos</button>
+        <button mat-menu-item>Estrategias</button>
+    </mat-menu>
+
+    
+    <mat-menu #modernizacao="matMenu">
+        <button mat-menu-item>Documentos</button>
+        <button mat-menu-item>Estrategias</button>
+    </mat-menu>
+</mat-toolbar>
